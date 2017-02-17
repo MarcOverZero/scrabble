@@ -1,7 +1,16 @@
+require 'pry'
 class Scrabble
+  attr_reader :word
+  def initialize
+    @word = word
+  end
 
   def score(word)
-    1
+    parse_word= word.split("")
+    parse_word.map do |integer|
+      integer.to_i
+    end
+
   end
 
   def point_values
@@ -15,4 +24,6 @@ class Scrabble
       "Y"=>4, "Z"=>10
     }
   end
+  binding.pry
+  '---'
 end
